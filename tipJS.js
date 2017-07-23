@@ -7,23 +7,11 @@ var printTot = document.getElementById("print-check-tot");
 
 
 btnCalcCheck.addEventListener("click",function(){
-  printTip.innerText = "Tip: " + inputCheck.value * inputTip.value;
-  var checkTotal = (inputCheck.value * inputTip.value) + parseInt(inputCheck.value);
+  printTip.innerText = "Tip Total: " + (parseFloat(inputCheck.value) * parseFloat(inputTip.value)/100).toFixed(2);
+  var checkTotal = (parseFloat(inputCheck.value) + (parseFloat(inputCheck.value) * parseFloat(inputTip.value)/100)).toFixed(2);
+  //checkTotal = checkTotal.toFixed(2);
   printTot.innerHTML = "Check Total: " + checkTotal;
 });
 
-/*btnGreet2.addEventListener("click",function(){
-  printArea.innerText = btnGreet2.value + " " + inputText.value;
-});
 
-btnGreet3.addEventListener("click",function(){
-  printArea.innerText = btnGreet3.value + " " + inputText.value;
-});
-
-btnGreet4.addEventListener("click",function(){
-  printArea.innerText = btnGreet4.value + " " + inputText.value;
-});
-btnClear.addEventListener("click",function(){
-  printArea.innerText = " ";
-});*/
  
